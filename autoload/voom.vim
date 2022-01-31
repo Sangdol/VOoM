@@ -81,7 +81,7 @@ if !exists('s:voom_did_init')
     "        2 -- as 1, in addition Move Right/Left, Add New Headline As Child are not supported
     "   'mmode' : markup mode,
     "   'tick' : b:changedtick of Body on Body BufLeave,
-    "   'tick_' : b:changedtick of Body on last Tree update 
+    "   'tick_' : b:changedtick of Body on last Tree update
     "         }, {...}, ... }
     let s:voom_bodies = {}
 
@@ -1144,9 +1144,6 @@ nnoremap <buffer><silent> <LeftRelease> <LeftRelease>:<C-u>call voom#TreeMouseCl
 inoremap <buffer><silent> <LeftRelease> <LeftRelease><Esc>
 " disable Left mouse double click to avoid entering Visual mode
 nnoremap <buffer><silent> <2-LeftMouse> <Nop>
-
-nnoremap <buffer><silent> <Down> <Down>:<C-u>call voom#TreeSelect(1)<CR>
-nnoremap <buffer><silent>   <Up>   <Up>:<C-u>call voom#TreeSelect(1)<CR>
 
 nnoremap <buffer><silent> <Left>  :<C-u>call voom#TreeLeft()<CR>
 nnoremap <buffer><silent> <Right> :<C-u>call voom#TreeRight()<CR>
