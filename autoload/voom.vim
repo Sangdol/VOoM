@@ -1738,13 +1738,13 @@ func! voom#OopEdit(op) "{{{3
 
     " do zz only when target line is not in the window
     if l:bLnr < line('w0') || l:bLnr > line('w$')
-        let do_zz = 1
+        let do_zt = 1
     else
-        let do_zz = 0
+        let do_zt = 0
     endif
     exe 'keepj normal! '.l:bLnr.'Gzv^'
-    if do_zz
-        normal! zz
+    if do_zt
+        normal! zt
     endif
     if a:op==#'i'
         " put cursor on the headline text, then on the first word char
