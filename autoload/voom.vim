@@ -774,8 +774,11 @@ func! voom#ToTree(tree) abort "{{{2
     if !bufloaded(a:tree)
         let body = s:voom_trees[a:tree]
         call voom#UnVoom(body,a:tree)
-        echoerr "VOoM: Tree buffer" a:tree "is not loaded or does not exist. Cleanup has been performed."
-        return -1
+        "echoerr "VOoM: Tree buffer" a:tree "is not loaded or does not exist. Cleanup has been performed."
+        "return -1
+
+        echom "VoomTree doesn't exist but that's okay man"
+        return 1
     endif
     " Load Tree in appropriate window.
     call voom#ToTreeWin()
